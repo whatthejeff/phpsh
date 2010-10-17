@@ -168,7 +168,7 @@ def inc_args(s):
 def xdebug_loaded():
     """checks if Xdebug is already loaded"""
     try:
-        retcode = call("php -m | grep Xdebug > /dev/null", shell=True)
+        retcode = call("php -m | grep Xdebug &> /dev/null", shell=True)
         return retcode == 0
     except OSError:
         return False
